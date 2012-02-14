@@ -29,7 +29,7 @@ var view = Titanium.UI.createView({
 
 //logo left margin
 var _logoWidth  = 255
-var _logoHeight = 200
+var _logoHeight = 255
 var _logoMarginLeft = (view.width - _logoWidth)/2
 var _logoMarginTop = (view.height - _logoHeight)/2
 
@@ -57,7 +57,7 @@ var label2 = Titanium.UI.createLabel({
 	text:'Titanium Cook Book',
 	font:{fontSize:16,fontFamily:'Helvetica Neue'},
 	textAlign:'center',
-	top:220,
+	top:_logoMarginTop+_logoHeight +10,
 	width:'auto'
 });
 view.add(label2);
