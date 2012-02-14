@@ -1,0 +1,801 @@
+================================================================================
+Appcelerator Titanium Diagnostics Build Log
+The contents of this file are useful to send to Appcelerator Support if
+reporting an issue to help us understand your environment, build settings
+and aid in debugging. Please attach this log to any issue that you report.
+================================================================================
+
+Starting build at 02/15/12 02:11
+
+Build details:
+
+   timestamp=01/27/12 17:31
+   module_apiversion=2
+   version=1.8.1
+   githash=a24502a
+
+
+Script arguments:
+   /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone/builder.py
+   simulator
+   5.0
+   /Users/Gustav/Documents/GitHubPool/LoanCalc
+   test.gustavhsiung.LoanCalc
+   LoanCalc
+   universal
+   iphone
+   192.168.1.111:56425
+
+Building from: /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone
+Platform: Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011; root:xnu-1699.24.8~1/RELEASE_X86_64
+
+Xcode path is: /Developer
+
+
+githash=a24502a, existing_git_hash=a24502a
+writing contents of /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/project.xcconfig:
+
+TI_VERSION=1.8.1
+TI_SDK_DIR=/Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
+TI_APPID=test.gustavhsiung.LoanCalc
+OTHER_LDFLAGS[sdk=iphoneos*]=$(inherited) -weak_framework iAd
+OTHER_LDFLAGS[sdk=iphonesimulator*]=$(inherited) -weak_framework iAd
+#include "module"
+
+old contents
+
+
+Generated the following stylecode code:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>classes</key>
+		<dict>
+</dict>
+
+		<key>classes_density</key>
+		<dict>
+</dict>
+
+		<key>ids</key>
+		<dict>
+</dict>
+
+		<key>ids_density</key>
+		<dict>
+</dict>
+
+		<key>tags</key>
+		<dict>
+</dict>
+
+		<key>tags_density</key>
+		<dict>
+</dict>
+
+	</dict>
+</plist>
+Starting Xcode compile with the following arguments:
+
+    xcodebuild
+    -target
+    LoanCalc-universal
+    -configuration
+    Debug
+    -sdk
+    iphonesimulator5.0
+    GCC_PREPROCESSOR_DEFINITIONS=__LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.8.1 DEBUGGER_ENABLED=1 
+    IPHONEOS_DEPLOYMENT_TARGET=4.0
+    TARGETED_DEVICE_FAMILY=1,2
+    VALID_ARCHS=armv6 armv7 i386
+
+app_id = test.gustavhsiung.LoanCalc
+
+
+Build settings from command line:
+    GCC_PREPROCESSOR_DEFINITIONS = __LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.8.1 DEBUGGER_ENABLED=1 
+    IPHONEOS_DEPLOYMENT_TARGET = 4.0
+    SDKROOT = iphonesimulator5.0
+    TARGETED_DEVICE_FAMILY = 1,2
+    VALID_ARCHS = armv6 armv7 i386
+
+=== BUILD NATIVE TARGET LoanCalc-universal OF PROJECT LoanCalc WITH CONFIGURATION Debug ===
+Check dependencies
+
+ProcessInfoPlistFile build/Debug-iphonesimulator/LoanCalc.app/Info.plist Info.plist
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-infoPlistUtility Info.plist -genpkginfo /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Info.plist
+
+PhaseScriptExecution Pre-Compile build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Script-DABB369F12E8CB280026A6EA.sh
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv ACTION build
+    setenv ALTERNATE_GROUP staff
+    setenv ALTERNATE_MODE u+w,go-w,a+rX
+    setenv ALTERNATE_OWNER Gustav
+    setenv ALWAYS_SEARCH_USER_PATHS NO
+    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer
+    setenv APPLE_INTERNAL_DIR /AppleInternal
+    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation
+    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library
+    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools
+    setenv APPLY_RULES_IN_COPY_FILES NO
+    setenv ARCHS i386
+    setenv ARCHS_STANDARD_32_BIT i386
+    setenv ARCHS_UNIVERSAL_IPHONE_OS i386
+    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"
+    setenv BUILD_COMPONENTS "headers build"
+    setenv BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv BUILD_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv BUILD_STYLE 
+    setenv BUILD_VARIANTS normal
+    setenv BUILT_PRODUCTS_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv CACHE_ROOT /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501
+    setenv CCHROOT /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501
+    setenv CHMOD /bin/chmod
+    setenv CHOWN /usr/sbin/chown
+    setenv CLASS_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/JavaClasses
+    setenv CLEAN_PRECOMPS YES
+    setenv CLONE_HEADERS NO
+    setenv CODESIGNING_FOLDER_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+    setenv CODE_SIGN_IDENTITY "iPhone Developer"
+    setenv COMMAND_MODE legacy
+    setenv COMPOSITE_SDK_DIRS /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/CompositeSDKs
+    setenv COMPRESS_PNG_FILES YES
+    setenv CONFIGURATION Debug
+    setenv CONFIGURATION_BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv CONFIGURATION_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator
+    setenv CONTENTS_FOLDER_PATH LoanCalc.app
+    setenv COPYING_PRESERVES_HFS_DATA NO
+    setenv COPY_PHASE_STRIP NO
+    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES
+    setenv CP /bin/cp
+    setenv CURRENT_ARCH i386
+    setenv CURRENT_VARIANT normal
+    setenv DEAD_CODE_STRIPPING NO
+    setenv DEBUGGING_SYMBOLS YES
+    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym
+    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0
+    setenv DEPLOYMENT_LOCATION NO
+    setenv DEPLOYMENT_POSTPROCESSING NO
+    setenv DERIVED_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DERIVED_SOURCES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications
+    setenv DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv DEVELOPER_DIR /Developer
+    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks
+    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""
+    setenv DEVELOPER_LIBRARY_DIR /Developer/Library
+    setenv DEVELOPER_SDK_DIR /Developer/SDKs
+    setenv DEVELOPER_TOOLS_DIR /Developer/Tools
+    setenv DEVELOPER_USR_DIR /Developer/usr
+    setenv DEVELOPMENT_LANGUAGE English
+    setenv DOCUMENTATION_FOLDER_PATH LoanCalc.app/English.lproj/Documentation
+    setenv DO_HEADER_SCANNING_IN_JAM NO
+    setenv DSTROOT /tmp/LoanCalc.dst
+    setenv DWARF_DSYM_FILE_NAME LoanCalc.app.dSYM
+    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO
+    setenv DWARF_DSYM_FOLDER_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator
+    setenv ENABLE_HEADER_DEPENDENCIES YES
+    setenv ENABLE_OPENMP_SUPPORT NO
+    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"
+    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"
+    setenv EXECUTABLES_FOLDER_PATH LoanCalc.app/Executables
+    setenv EXECUTABLE_FOLDER_PATH LoanCalc.app
+    setenv EXECUTABLE_NAME LoanCalc
+    setenv EXECUTABLE_PATH LoanCalc.app/LoanCalc
+    setenv FILE_LIST /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects/LinkFileList
+    setenv FIXED_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/FixedFiles
+    setenv FRAMEWORKS_FOLDER_PATH LoanCalc.app/Frameworks
+    setenv FRAMEWORK_FLAG_PREFIX -framework
+    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\" "
+    setenv FRAMEWORK_VERSION A
+    setenv FULL_PRODUCT_NAME LoanCalc.app
+    setenv GCC3_VERSION 3.3
+    setenv GCC_C_LANGUAGE_STANDARD c99
+    setenv GCC_DYNAMIC_NO_PIC NO
+    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES
+    setenv GCC_OBJC_LEGACY_DISPATCH YES
+    setenv GCC_OPTIMIZATION_LEVEL 0
+    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv GCC_PRECOMPILE_PREFIX_HEADER YES
+    setenv GCC_PREFIX_HEADER LoanCalc_Prefix.pch
+    setenv GCC_PREPROCESSOR_DEFINITIONS "__LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.8.1 DEBUGGER_ENABLED=1 "
+    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES
+    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO
+    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0
+    setenv GCC_WARN_ABOUT_RETURN_TYPE NO
+    setenv GCC_WARN_MISSING_PARENTHESES NO
+    setenv GCC_WARN_SHADOW NO
+    setenv GCC_WARN_STRICT_SELECTOR_MATCH NO
+    setenv GCC_WARN_UNUSED_FUNCTION YES
+    setenv GCC_WARN_UNUSED_PARAMETER NO
+    setenv GCC_WARN_UNUSED_VALUE NO
+    setenv GCC_WARN_UNUSED_VARIABLE NO
+    setenv GENERATE_MASTER_OBJECT_FILE NO
+    setenv GENERATE_PKGINFO_FILE YES
+    setenv GENERATE_PROFILING_CODE NO
+    setenv GID 20
+    setenv GROUP staff
+    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES
+    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES
+    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES
+    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES
+    setenv HEADER_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/include\" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 headers"
+    setenv ICONV /usr/bin/iconv
+    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES
+    setenv INFOPLIST_FILE Info.plist
+    setenv INFOPLIST_OUTPUT_FORMAT binary
+    setenv INFOPLIST_PATH LoanCalc.app/Info.plist
+    setenv INFOPLIST_PREPROCESS NO
+    setenv INFOSTRINGS_PATH LoanCalc.app/English.lproj/InfoPlist.strings
+    setenv INSTALL_DIR /tmp/LoanCalc.dst/Applications
+    setenv INSTALL_GROUP staff
+    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX
+    setenv INSTALL_OWNER Gustav
+    setenv INSTALL_PATH /Applications
+    setenv INSTALL_ROOT /tmp/LoanCalc.dst
+    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0
+    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    setenv JAVA_ARCHIVE_CLASSES YES
+    setenv JAVA_ARCHIVE_TYPE JAR
+    setenv JAVA_COMPILER /usr/bin/javac
+    setenv JAVA_FOLDER_PATH LoanCalc.app/Java
+    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources
+    setenv JAVA_JAR_FLAGS cv
+    setenv JAVA_SOURCE_SUBDIR .
+    setenv JAVA_USE_DEPENDENCIES YES
+    setenv JAVA_ZIP_FLAGS -urg
+    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"
+    setenv KEEP_PRIVATE_EXTERNS NO
+    setenv LD_GENERATE_MAP_FILE NO
+    setenv LD_MAP_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-LinkMap-normal-i386.txt
+    setenv LD_NO_PIE NO
+    setenv LD_OPENMP_FLAGS -fopenmp
+    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    setenv LEX /Developer/usr/bin/lex
+    setenv LIBRARY_FLAG_NOSPACE YES
+    setenv LIBRARY_FLAG_PREFIX -l
+    setenv LIBRARY_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\"  \"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/lib\""
+    setenv LINKER_DISPLAYS_MANGLED_NAMES NO
+    setenv LINK_FILE_LIST_normal_i386 /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/LoanCalc.LinkFileList
+    setenv LINK_WITH_STANDARD_LIBRARIES YES
+    setenv LOCALIZED_RESOURCES_FOLDER_PATH LoanCalc.app/English.lproj
+    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities
+    setenv LOCAL_APPS_DIR /Applications
+    setenv LOCAL_DEVELOPER_DIR /Library/Developer
+    setenv LOCAL_LIBRARY_DIR /Library
+    setenv MACH_O_TYPE mh_execute
+    setenv MACOSX_DEPLOYMENT_TARGET 10.6
+    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11C74
+    setenv MAC_OS_X_VERSION_ACTUAL 1072
+    setenv MAC_OS_X_VERSION_MAJOR 1070
+    setenv MAC_OS_X_VERSION_MINOR 0702
+    setenv NATIVE_ARCH i386
+    setenv NATIVE_ARCH_32_BIT i386
+    setenv NATIVE_ARCH_64_BIT x86_64
+    setenv NATIVE_ARCH_ACTUAL x86_64
+    setenv NO_COMMON YES
+    setenv OBJC_ABI_VERSION 2
+    setenv OBJECT_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects
+    setenv OBJECT_FILE_DIR_normal /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal
+    setenv OBJROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv ONLY_ACTIVE_ARCH NO
+    setenv OPTIMIZATION_LEVEL 0
+    setenv OS MACOS
+    setenv OSAC /usr/bin/osacompile
+    setenv OTHER_CFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_CPLUSPLUSFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_LDFLAGS "-ObjC -weak_framework iAd"
+    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application
+    setenv PASCAL_STRINGS YES
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"
+    setenv PBDEVELOPMENTPLIST_PATH LoanCalc.app/pbdevelopment.plist
+    setenv PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv PKGINFO_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/PkgInfo
+    setenv PKGINFO_PATH LoanCalc.app/PkgInfo
+    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform
+    setenv PLATFORM_NAME iphonesimulator
+    setenv PLATFORM_PREFERRED_ARCH i386
+    setenv PLATFORM_PRODUCT_BUILD_VERSION 9A334
+    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 50000
+    setenv PLIST_FILE_OUTPUT_FORMAT binary
+    setenv PLUGINS_FOLDER_PATH LoanCalc.app/PlugIns
+    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES
+    setenv PRECOMP_DESTINATION_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/PrefixHeaders
+    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO
+    setenv PRIVATE_HEADERS_FOLDER_PATH LoanCalc.app/PrivateHeaders
+    setenv PRODUCT_NAME LoanCalc
+    setenv PRODUCT_SETTINGS_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Info.plist
+    setenv PRODUCT_TYPE com.apple.product-type.application
+    setenv PROFILING_CODE NO
+    setenv PROJECT LoanCalc
+    setenv PROJECT_DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/DerivedSources
+    setenv PROJECT_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PROJECT_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/LoanCalc.xcodeproj
+    setenv PROJECT_NAME LoanCalc
+    setenv PROJECT_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build
+    setenv PUBLIC_HEADERS_FOLDER_PATH LoanCalc.app/Headers
+    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES
+    setenv REMOVE_CVS_FROM_RESOURCES YES
+    setenv REMOVE_GIT_FROM_RESOURCES YES
+    setenv REMOVE_HG_FROM_RESOURCES YES
+    setenv REMOVE_SVN_FROM_RESOURCES YES
+    setenv REZ_COLLECTOR_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/ResourceManagerResources
+    setenv REZ_OBJECTS_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/ResourceManagerResources/Objects
+    setenv REZ_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\" "
+    setenv RUN_CLANG_STATIC_ANALYZER NO
+    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO
+    setenv SCRIPTS_FOLDER_PATH LoanCalc.app/Scripts
+    setenv SCRIPT_INPUT_FILE_COUNT 0
+    setenv SCRIPT_OUTPUT_FILE_COUNT 0
+    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+    setenv SDK_NAME iphonesimulator5.0
+    setenv SDK_PRODUCT_BUILD_VERSION 9A334
+    setenv SED /usr/bin/sed
+    setenv SEPARATE_STRIP NO
+    setenv SEPARATE_SYMBOL_EDIT NO
+    setenv SET_DIR_MODE_OWNER_GROUP YES
+    setenv SET_FILE_MODE_OWNER_GROUP NO
+    setenv SHALLOW_BUNDLE YES
+    setenv SHARED_DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/DerivedSources
+    setenv SHARED_FRAMEWORKS_FOLDER_PATH LoanCalc.app/SharedFrameworks
+    setenv SHARED_PRECOMPS_DIR /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders
+    setenv SHARED_SUPPORT_FOLDER_PATH LoanCalc.app/SharedSupport
+    setenv SKIP_INSTALL NO
+    setenv SOURCE_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv SRCROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv STRINGS_FILE_OUTPUT_ENCODING binary
+    setenv STRIP_INSTALLED_PRODUCT YES
+    setenv STRIP_STYLE all
+    setenv SUPPORTED_DEVICE_FAMILIES "1 2"
+    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"
+    setenv SYMROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities
+    setenv SYSTEM_APPS_DIR /Applications
+    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices
+    setenv SYSTEM_DEMOS_DIR /Applications/Extras
+    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications
+    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"
+    setenv SYSTEM_DEVELOPER_DIR /Developer
+    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"
+    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"
+    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"
+    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"
+    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"
+    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools
+    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr
+    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities
+    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation
+    setenv SYSTEM_LIBRARY_DIR /System/Library
+    setenv TARGETED_DEVICE_FAMILY 1,2
+    setenv TARGETNAME LoanCalc-universal
+    setenv TARGET_BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv TARGET_NAME LoanCalc-universal
+    setenv TARGET_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv TEST_AFTER_BUILD YES
+    setenv TI_APPID test.gustavhsiung.LoanCalc
+    setenv TI_SDK_DIR "/Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone"
+    setenv TI_VERSION 1.8.1
+    setenv UID 501
+    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH LoanCalc.app
+    setenv UNSTRIPPED_PRODUCT NO
+    setenv USER Gustav
+    setenv USER_APPS_DIR /Users/Gustav/Applications
+    setenv USER_LIBRARY_DIR /Users/Gustav/Library
+    setenv USE_DYNAMIC_NO_PIC YES
+    setenv USE_HEADERMAP YES
+    setenv USE_HEADER_SYMLINKS NO
+    setenv VALIDATE_PRODUCT NO
+    setenv VALID_ARCHS "armv6 armv7 i386"
+    setenv VERBOSE_PBXCP NO
+    setenv VERSIONPLIST_PATH LoanCalc.app/version.plist
+    setenv VERSION_INFO_BUILDER Gustav
+    setenv VERSION_INFO_FILE LoanCalc_vers.c
+    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:LoanCalc  PROJECT:LoanCalc-\""
+    setenv WRAPPER_EXTENSION app
+    setenv WRAPPER_NAME LoanCalc.app
+    setenv WRAPPER_SUFFIX .app
+    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode
+    setenv XCODE_PRODUCT_BUILD_VERSION 4D502
+    setenv XCODE_VERSION_ACTUAL 0421
+    setenv XCODE_VERSION_MAJOR 0400
+    setenv XCODE_VERSION_MINOR 0420
+    setenv YACC /Developer/usr/bin/yacc
+    /bin/sh -c /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Script-DABB369F12E8CB280026A6EA.sh
+[INFO] One moment, building ...
+[INFO] Titanium SDK version: 1.8.1
+[INFO] iPhone Device family: universal
+[INFO] iPhone SDK version: 5.0
+[DEBUG] Detecting modules in /Users/Gustav/Documents/GitHubPool/LoanCalc/modules
+[DEBUG] Detecting modules in /Users/Gustav/Library/Application Support/Titanium/modules
+[DEBUG] copy resources from /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+[DEBUG] copy resources from /Users/Gustav/Documents/GitHubPool/LoanCalc/platform/iphone to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+[INFO] Skipping JS compile, running from simulator
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/app.js to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/app.js
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/background.jpg to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/background.jpg
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/appicon.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/appicon.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Landscape.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Landscape.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Portrait.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Portrait.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default@2x.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default@2x.png
+
+CpResource Resources/Default.png build/Debug-iphonesimulator/LoanCalc.app/Default.png
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Resources/Default.png /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+
+CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/stylesheet.plist Resources/stylesheet.plist
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/stylesheet.plist
+
+CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/debugger.plist Resources/debugger.plist
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/debugger.plist
+
+CompileC build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/ApplicationRouting.o Classes/ApplicationRouting.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv LANG en_US.US-ASCII
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wno-parentheses -Wswitch -Wunused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-shorten-64-to-32 -D__LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d -DDEPLOYTYPE=development -DTI_DEVELOPMENT=1 -DDEBUG=1 -DTI_VERSION=1.8.1 -DDEBUGGER_ENABLED=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-generated-files.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-own-target-headers.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-all-target-headers.hmap -iquote /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-project-headers.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -Iheaders -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources/i386 -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources -F/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator -DIPAD -DTI_POST_1_2 -DDEBUG -include /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/LoanCalc_Prefix-dwtedzcjbxzgdtfgsgwewqyvufwm/LoanCalc_Prefix.pch -MMD -MT dependencies -MF /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/ApplicationRouting.d -c /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Classes/ApplicationRouting.m -o /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/ApplicationRouting.o
+
+Ld build/Debug-iphonesimulator/LoanCalc.app/LoanCalc normal i386
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv MACOSX_DEPLOYMENT_TARGET 10.6
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang++ -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator -L/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/lib -F/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator -filelist /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/LoanCalc.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -ObjC -weak_framework iAd -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework CFNetwork -framework CoreLocation -framework MapKit -framework MessageUI -framework MobileCoreServices -framework OpenGLES -framework QuartzCore -framework SystemConfiguration -lsqlite3 -lz -framework AudioToolbox -weak_framework MediaPlayer -framework AVFoundation -lxml2 -framework StoreKit -lTiCore -ltiverify -lti_ios_debugger -licucore -o /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/LoanCalc
+
+GenerateDSYMFile build/Debug-iphonesimulator/LoanCalc.app.dSYM build/Debug-iphonesimulator/LoanCalc.app/LoanCalc
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Developer/usr/bin/dsymutil /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/LoanCalc -o /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app.dSYM
+
+PhaseScriptExecution Post-Compile build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Script-DABB37B812E8CB280026A6EA.sh
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv ACTION build
+    setenv ALTERNATE_GROUP staff
+    setenv ALTERNATE_MODE u+w,go-w,a+rX
+    setenv ALTERNATE_OWNER Gustav
+    setenv ALWAYS_SEARCH_USER_PATHS NO
+    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer
+    setenv APPLE_INTERNAL_DIR /AppleInternal
+    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation
+    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library
+    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools
+    setenv APPLY_RULES_IN_COPY_FILES NO
+    setenv ARCHS i386
+    setenv ARCHS_STANDARD_32_BIT i386
+    setenv ARCHS_UNIVERSAL_IPHONE_OS i386
+    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"
+    setenv BUILD_COMPONENTS "headers build"
+    setenv BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv BUILD_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv BUILD_STYLE 
+    setenv BUILD_VARIANTS normal
+    setenv BUILT_PRODUCTS_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv CACHE_ROOT /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501
+    setenv CCHROOT /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501
+    setenv CHMOD /bin/chmod
+    setenv CHOWN /usr/sbin/chown
+    setenv CLASS_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/JavaClasses
+    setenv CLEAN_PRECOMPS YES
+    setenv CLONE_HEADERS NO
+    setenv CODESIGNING_FOLDER_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+    setenv CODE_SIGN_IDENTITY "iPhone Developer"
+    setenv COMMAND_MODE legacy
+    setenv COMPOSITE_SDK_DIRS /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/CompositeSDKs
+    setenv COMPRESS_PNG_FILES YES
+    setenv CONFIGURATION Debug
+    setenv CONFIGURATION_BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv CONFIGURATION_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator
+    setenv CONTENTS_FOLDER_PATH LoanCalc.app
+    setenv COPYING_PRESERVES_HFS_DATA NO
+    setenv COPY_PHASE_STRIP NO
+    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES
+    setenv CP /bin/cp
+    setenv CURRENT_ARCH i386
+    setenv CURRENT_VARIANT normal
+    setenv DEAD_CODE_STRIPPING NO
+    setenv DEBUGGING_SYMBOLS YES
+    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym
+    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0
+    setenv DEPLOYMENT_LOCATION NO
+    setenv DEPLOYMENT_POSTPROCESSING NO
+    setenv DERIVED_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DERIVED_SOURCES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources
+    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications
+    setenv DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv DEVELOPER_DIR /Developer
+    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks
+    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""
+    setenv DEVELOPER_LIBRARY_DIR /Developer/Library
+    setenv DEVELOPER_SDK_DIR /Developer/SDKs
+    setenv DEVELOPER_TOOLS_DIR /Developer/Tools
+    setenv DEVELOPER_USR_DIR /Developer/usr
+    setenv DEVELOPMENT_LANGUAGE English
+    setenv DOCUMENTATION_FOLDER_PATH LoanCalc.app/English.lproj/Documentation
+    setenv DO_HEADER_SCANNING_IN_JAM NO
+    setenv DSTROOT /tmp/LoanCalc.dst
+    setenv DWARF_DSYM_FILE_NAME LoanCalc.app.dSYM
+    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO
+    setenv DWARF_DSYM_FOLDER_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator
+    setenv ENABLE_HEADER_DEPENDENCIES YES
+    setenv ENABLE_OPENMP_SUPPORT NO
+    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"
+    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"
+    setenv EXECUTABLES_FOLDER_PATH LoanCalc.app/Executables
+    setenv EXECUTABLE_FOLDER_PATH LoanCalc.app
+    setenv EXECUTABLE_NAME LoanCalc
+    setenv EXECUTABLE_PATH LoanCalc.app/LoanCalc
+    setenv FILE_LIST /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects/LinkFileList
+    setenv FIXED_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/FixedFiles
+    setenv FRAMEWORKS_FOLDER_PATH LoanCalc.app/Frameworks
+    setenv FRAMEWORK_FLAG_PREFIX -framework
+    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\" "
+    setenv FRAMEWORK_VERSION A
+    setenv FULL_PRODUCT_NAME LoanCalc.app
+    setenv GCC3_VERSION 3.3
+    setenv GCC_C_LANGUAGE_STANDARD c99
+    setenv GCC_DYNAMIC_NO_PIC NO
+    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES
+    setenv GCC_OBJC_LEGACY_DISPATCH YES
+    setenv GCC_OPTIMIZATION_LEVEL 0
+    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv GCC_PRECOMPILE_PREFIX_HEADER YES
+    setenv GCC_PREFIX_HEADER LoanCalc_Prefix.pch
+    setenv GCC_PREPROCESSOR_DEFINITIONS "__LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.8.1 DEBUGGER_ENABLED=1 "
+    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES
+    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO
+    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0
+    setenv GCC_WARN_ABOUT_RETURN_TYPE NO
+    setenv GCC_WARN_MISSING_PARENTHESES NO
+    setenv GCC_WARN_SHADOW NO
+    setenv GCC_WARN_STRICT_SELECTOR_MATCH NO
+    setenv GCC_WARN_UNUSED_FUNCTION YES
+    setenv GCC_WARN_UNUSED_PARAMETER NO
+    setenv GCC_WARN_UNUSED_VALUE NO
+    setenv GCC_WARN_UNUSED_VARIABLE NO
+    setenv GENERATE_MASTER_OBJECT_FILE NO
+    setenv GENERATE_PKGINFO_FILE YES
+    setenv GENERATE_PROFILING_CODE NO
+    setenv GID 20
+    setenv GROUP staff
+    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES
+    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES
+    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES
+    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES
+    setenv HEADER_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/include\" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 headers"
+    setenv ICONV /usr/bin/iconv
+    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES
+    setenv INFOPLIST_FILE Info.plist
+    setenv INFOPLIST_OUTPUT_FORMAT binary
+    setenv INFOPLIST_PATH LoanCalc.app/Info.plist
+    setenv INFOPLIST_PREPROCESS NO
+    setenv INFOSTRINGS_PATH LoanCalc.app/English.lproj/InfoPlist.strings
+    setenv INSTALL_DIR /tmp/LoanCalc.dst/Applications
+    setenv INSTALL_GROUP staff
+    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX
+    setenv INSTALL_OWNER Gustav
+    setenv INSTALL_PATH /Applications
+    setenv INSTALL_ROOT /tmp/LoanCalc.dst
+    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0
+    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    setenv JAVA_ARCHIVE_CLASSES YES
+    setenv JAVA_ARCHIVE_TYPE JAR
+    setenv JAVA_COMPILER /usr/bin/javac
+    setenv JAVA_FOLDER_PATH LoanCalc.app/Java
+    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources
+    setenv JAVA_JAR_FLAGS cv
+    setenv JAVA_SOURCE_SUBDIR .
+    setenv JAVA_USE_DEPENDENCIES YES
+    setenv JAVA_ZIP_FLAGS -urg
+    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"
+    setenv KEEP_PRIVATE_EXTERNS NO
+    setenv LD_GENERATE_MAP_FILE NO
+    setenv LD_MAP_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-LinkMap-normal-i386.txt
+    setenv LD_NO_PIE NO
+    setenv LD_OPENMP_FLAGS -fopenmp
+    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    setenv LEX /Developer/usr/bin/lex
+    setenv LIBRARY_FLAG_NOSPACE YES
+    setenv LIBRARY_FLAG_PREFIX -l
+    setenv LIBRARY_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\"  \"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/lib\""
+    setenv LINKER_DISPLAYS_MANGLED_NAMES NO
+    setenv LINK_FILE_LIST_normal_i386 /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/LoanCalc.LinkFileList
+    setenv LINK_WITH_STANDARD_LIBRARIES YES
+    setenv LOCALIZED_RESOURCES_FOLDER_PATH LoanCalc.app/English.lproj
+    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities
+    setenv LOCAL_APPS_DIR /Applications
+    setenv LOCAL_DEVELOPER_DIR /Library/Developer
+    setenv LOCAL_LIBRARY_DIR /Library
+    setenv MACH_O_TYPE mh_execute
+    setenv MACOSX_DEPLOYMENT_TARGET 10.6
+    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11C74
+    setenv MAC_OS_X_VERSION_ACTUAL 1072
+    setenv MAC_OS_X_VERSION_MAJOR 1070
+    setenv MAC_OS_X_VERSION_MINOR 0702
+    setenv NATIVE_ARCH i386
+    setenv NATIVE_ARCH_32_BIT i386
+    setenv NATIVE_ARCH_64_BIT x86_64
+    setenv NATIVE_ARCH_ACTUAL x86_64
+    setenv NO_COMMON YES
+    setenv OBJC_ABI_VERSION 2
+    setenv OBJECT_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects
+    setenv OBJECT_FILE_DIR_normal /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal
+    setenv OBJROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv ONLY_ACTIVE_ARCH NO
+    setenv OPTIMIZATION_LEVEL 0
+    setenv OS MACOS
+    setenv OSAC /usr/bin/osacompile
+    setenv OTHER_CFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_CPLUSPLUSFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_LDFLAGS "-ObjC -weak_framework iAd"
+    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application
+    setenv PASCAL_STRINGS YES
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"
+    setenv PBDEVELOPMENTPLIST_PATH LoanCalc.app/pbdevelopment.plist
+    setenv PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv PKGINFO_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/PkgInfo
+    setenv PKGINFO_PATH LoanCalc.app/PkgInfo
+    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform
+    setenv PLATFORM_NAME iphonesimulator
+    setenv PLATFORM_PREFERRED_ARCH i386
+    setenv PLATFORM_PRODUCT_BUILD_VERSION 9A334
+    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 50000
+    setenv PLIST_FILE_OUTPUT_FORMAT binary
+    setenv PLUGINS_FOLDER_PATH LoanCalc.app/PlugIns
+    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES
+    setenv PRECOMP_DESTINATION_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/PrefixHeaders
+    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO
+    setenv PRIVATE_HEADERS_FOLDER_PATH LoanCalc.app/PrivateHeaders
+    setenv PRODUCT_NAME LoanCalc
+    setenv PRODUCT_SETTINGS_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Info.plist
+    setenv PRODUCT_TYPE com.apple.product-type.application
+    setenv PROFILING_CODE NO
+    setenv PROJECT LoanCalc
+    setenv PROJECT_DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/DerivedSources
+    setenv PROJECT_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PROJECT_FILE_PATH /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/LoanCalc.xcodeproj
+    setenv PROJECT_NAME LoanCalc
+    setenv PROJECT_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build
+    setenv PUBLIC_HEADERS_FOLDER_PATH LoanCalc.app/Headers
+    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES
+    setenv REMOVE_CVS_FROM_RESOURCES YES
+    setenv REMOVE_GIT_FROM_RESOURCES YES
+    setenv REMOVE_HG_FROM_RESOURCES YES
+    setenv REMOVE_SVN_FROM_RESOURCES YES
+    setenv REZ_COLLECTOR_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/ResourceManagerResources
+    setenv REZ_OBJECTS_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/ResourceManagerResources/Objects
+    setenv REZ_SEARCH_PATHS "\"/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator\" "
+    setenv RUN_CLANG_STATIC_ANALYZER NO
+    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO
+    setenv SCRIPTS_FOLDER_PATH LoanCalc.app/Scripts
+    setenv SCRIPT_INPUT_FILE_COUNT 0
+    setenv SCRIPT_OUTPUT_FILE_COUNT 0
+    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+    setenv SDK_NAME iphonesimulator5.0
+    setenv SDK_PRODUCT_BUILD_VERSION 9A334
+    setenv SED /usr/bin/sed
+    setenv SEPARATE_STRIP NO
+    setenv SEPARATE_SYMBOL_EDIT NO
+    setenv SET_DIR_MODE_OWNER_GROUP YES
+    setenv SET_FILE_MODE_OWNER_GROUP NO
+    setenv SHALLOW_BUNDLE YES
+    setenv SHARED_DERIVED_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/DerivedSources
+    setenv SHARED_FRAMEWORKS_FOLDER_PATH LoanCalc.app/SharedFrameworks
+    setenv SHARED_PRECOMPS_DIR /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders
+    setenv SHARED_SUPPORT_FOLDER_PATH LoanCalc.app/SharedSupport
+    setenv SKIP_INSTALL NO
+    setenv SOURCE_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv SRCROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv STRINGS_FILE_OUTPUT_ENCODING binary
+    setenv STRIP_INSTALLED_PRODUCT YES
+    setenv STRIP_STYLE all
+    setenv SUPPORTED_DEVICE_FAMILIES "1 2"
+    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"
+    setenv SYMROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities
+    setenv SYSTEM_APPS_DIR /Applications
+    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices
+    setenv SYSTEM_DEMOS_DIR /Applications/Extras
+    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications
+    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"
+    setenv SYSTEM_DEVELOPER_DIR /Developer
+    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"
+    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"
+    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"
+    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"
+    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"
+    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools
+    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr
+    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities
+    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation
+    setenv SYSTEM_LIBRARY_DIR /System/Library
+    setenv TARGETED_DEVICE_FAMILY 1,2
+    setenv TARGETNAME LoanCalc-universal
+    setenv TARGET_BUILD_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator
+    setenv TARGET_NAME LoanCalc-universal
+    setenv TARGET_TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_FILES_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_FILE_DIR /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build
+    setenv TEMP_ROOT /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build
+    setenv TEST_AFTER_BUILD YES
+    setenv TI_APPID test.gustavhsiung.LoanCalc
+    setenv TI_SDK_DIR "/Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone"
+    setenv TI_VERSION 1.8.1
+    setenv UID 501
+    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH LoanCalc.app
+    setenv UNSTRIPPED_PRODUCT NO
+    setenv USER Gustav
+    setenv USER_APPS_DIR /Users/Gustav/Applications
+    setenv USER_LIBRARY_DIR /Users/Gustav/Library
+    setenv USE_DYNAMIC_NO_PIC YES
+    setenv USE_HEADERMAP YES
+    setenv USE_HEADER_SYMLINKS NO
+    setenv VALIDATE_PRODUCT NO
+    setenv VALID_ARCHS "armv6 armv7 i386"
+    setenv VERBOSE_PBXCP NO
+    setenv VERSIONPLIST_PATH LoanCalc.app/version.plist
+    setenv VERSION_INFO_BUILDER Gustav
+    setenv VERSION_INFO_FILE LoanCalc_vers.c
+    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:LoanCalc  PROJECT:LoanCalc-\""
+    setenv WRAPPER_EXTENSION app
+    setenv WRAPPER_NAME LoanCalc.app
+    setenv WRAPPER_SUFFIX .app
+    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode
+    setenv XCODE_PRODUCT_BUILD_VERSION 4D502
+    setenv XCODE_VERSION_ACTUAL 0421
+    setenv XCODE_VERSION_MAJOR 0400
+    setenv XCODE_VERSION_MINOR 0420
+    setenv YACC /Developer/usr/bin/yacc
+    /bin/sh -c /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Script-DABB37B812E8CB280026A6EA.sh
+post-compile
+
+Touch build/Debug-iphonesimulator/LoanCalc.app
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /usr/bin/touch -c /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+
+
+** BUILD SUCCEEDED **
+
++ Looking for application binary at /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/LoanCalc
+Finishing build
