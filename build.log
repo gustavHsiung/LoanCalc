@@ -1,18 +1,23 @@
 Logfile initialized
 [INFO] logfile = /Users/Gustav/Documents/GitHubPool/LoanCalc/build.log
-[DEBUG] /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/android/builder.py simulator LoanCalc /Users/Gustav/MyLib/TiLib /Users/Gustav/Documents/GitHubPool/LoanCalc test.gustavhsiung.LoanCalc 4 HVGA /127.0.0.1:51682
+[DEBUG] /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/android/builder.py simulator LoanCalc /Users/Gustav/MyLib/TiLib /Users/Gustav/Documents/GitHubPool/LoanCalc test.gustavhsiung.LoanCalc 4 HVGA /127.0.0.1:58154
 [INFO] Building LoanCalc for Android ... one moment
 [INFO] Titanium SDK version: 1.8.1 (01/27/12 17:31 a24502a)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 10 seconds)
-[DEBUG] waited 10.063319 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 30 seconds)
+[DEBUG] waited 30.164360 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] test.gustavhsiung.LoanCalc installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/app.js => /Users/Gustav/Documents/GitHubPool/LoanCalc/build/android/bin/assets/Resources/app.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/android/images/res-long-land-hdpi/default.png
@@ -30,4 +35,4 @@ Logfile initialized
 [INFO] Launching application ... LoanCalc
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=test.gustavhsiung.LoanCalc/.LoancalcActivity }
 
-[INFO] Forwarding host port 51682 to device for debugging.
+[INFO] Forwarding host port 58154 to device for debugging.

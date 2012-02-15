@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 02/15/12 11:26
+Starting build at 02/15/12 22:24
 
 Build details:
 
@@ -24,7 +24,7 @@ Script arguments:
    LoanCalc
    universal
    iphone
-   192.168.1.111:52136
+   192.168.1.111:59172
 
 Building from: /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone
 Platform: Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011; root:xnu-1699.24.8~1/RELEASE_X86_64
@@ -445,20 +445,26 @@ PhaseScriptExecution Pre-Compile build/LoanCalc.build/Debug-iphonesimulator/Loan
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default@2x.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default@2x.png
 
-CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/debugger.plist Resources/debugger.plist
-    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/debugger.plist
-
 CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/stylesheet.plist Resources/stylesheet.plist
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
     setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/stylesheet.plist
 
+CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/debugger.plist Resources/debugger.plist
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/debugger.plist
+
 CpResource Resources/Default.png build/Debug-iphonesimulator/LoanCalc.app/Default.png
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
     setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Resources/Default.png /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+
+CompileC build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
+    setenv LANG en_US.US-ASCII
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wno-parentheses -Wswitch -Wunused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-shorten-64-to-32 -D__LOG__ID__=309f6e74-7785-4420-9de2-acb5f666fb3d -DDEPLOYTYPE=development -DTI_DEVELOPMENT=1 -DDEBUG=1 -DTI_VERSION=1.8.1 -DDEBUGGER_ENABLED=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-generated-files.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-own-target-headers.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-all-target-headers.hmap -iquote /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/LoanCalc-project-headers.hmap -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -Iheaders -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources/i386 -I/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/DerivedSources -F/Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator -DIPAD -DTI_POST_1_2 -DDEBUG -include /var/folders/7f/hfxb0_js1db52062_258xnbr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/LoanCalc_Prefix-dwtedzcjbxzgdtfgsgwewqyvufwm/LoanCalc_Prefix.pch -MMD -MT dependencies -MF /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/main.d -c /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/main.m -o /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/main.o
 
 CompileC build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/ApplicationRouting.o Classes/ApplicationRouting.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
