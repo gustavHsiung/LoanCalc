@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 02/15/12 02:11
+Starting build at 02/15/12 11:26
 
 Build details:
 
@@ -24,7 +24,7 @@ Script arguments:
    LoanCalc
    universal
    iphone
-   192.168.1.111:56425
+   192.168.1.111:52136
 
 Building from: /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone
 Platform: Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011; root:xnu-1699.24.8~1/RELEASE_X86_64
@@ -434,27 +434,31 @@ PhaseScriptExecution Pre-Compile build/LoanCalc.build/Debug-iphonesimulator/Loan
 [INFO] Skipping JS compile, running from simulator
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/app.js to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/app.js
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/background.jpg to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/background.jpg
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/icon_calculator.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/icon_calculator.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/icon_settings.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/icon_settings.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.jpg to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.jpg
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.png.zip to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.png.zip
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/appicon.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/appicon.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Landscape.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Landscape.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Portrait.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Portrait.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default@2x.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default@2x.png
 
-CpResource Resources/Default.png build/Debug-iphonesimulator/LoanCalc.app/Default.png
+CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/debugger.plist Resources/debugger.plist
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
     setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Resources/Default.png /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
+    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/debugger.plist
 
 CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/stylesheet.plist Resources/stylesheet.plist
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
     setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/stylesheet.plist
 
-CopyPlistFile build/Debug-iphonesimulator/LoanCalc.app/debugger.plist Resources/debugger.plist
+CpResource Resources/Default.png build/Debug-iphonesimulator/LoanCalc.app/Default.png
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone
     setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    builtin-copyPlist --convert binary1 --outdir /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app -- Resources/debugger.plist
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/Resources/Default.png /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app
 
 CompileC build/LoanCalc.build/Debug-iphonesimulator/LoanCalc-universal.build/Objects-normal/i386/ApplicationRouting.o Classes/ApplicationRouting.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
     cd /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone

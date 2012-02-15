@@ -5,9 +5,14 @@ Titanium.UI.setBackgroundColor('#000');
 //
 // create base UI tab and root window
 //
+
+//create tab group
+var tabGroup = Ti.UI.createTabGroup();
+   
 var pWidth = Ti.Platform.displayCaps.platformWidth;
 var pHeight = Ti.Platform.displayCaps.platformHeight;
 
+//create the window
 var win1 = Titanium.UI.createWindow({  
     width:pWidth,
     height:pHeight,
@@ -23,7 +28,7 @@ var view = Titanium.UI.createView({
      left: 10,
      top: 20,
      backgroundColor: '#fff',
-     borderRadius: 5,
+     borderRadius: 5
      
 });
 
@@ -64,5 +69,36 @@ view.add(label2);
 
 win1.add(view);
 
-win1.open();
+//add the first tab and attach window object (win1) to it
+var tab1 = Ti.UI.createTab({
+    icon:'icon_calculator.png',
+    title:'Calculate',
+    window: win1
+});
+//end of win1   
+
+//create the second window for settings tab
+var win2 = Titanium.UI.createWindow({
+  width:pWidth,
+  height:pHeight,
+  top: 0,
+  left: 0,
+  backgroundImage: 'background.png',
+  url: 'window2.js',
+  title: 'Settings',
+  barImage: 'navbar.png'
+});
+
+//the second tab and attach the second window 
+var tab2 = Ti.UI.createTab({
+       icon:'icon_settings.png',
+       title:'Settings',
+       window: win2
+});
+//now add the tabs to the tabGroup object
+tabGroup.addTab(tab1);
+tabGroup.addTab(tab2);
+
+//open the tabgroup to launch the app
+tabGroup.open();
 
