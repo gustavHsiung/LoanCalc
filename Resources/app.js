@@ -82,8 +82,8 @@ var loanLengthLabel = Titanium.UI.createLabel({
 	text:'Loan length (' + numberMonths + ' months):',
 	font:{fontSize:14,fontFamily:'Helvetica Neue', fontWeight:'bold'},
 	textAlign:'left',
-	width:'auto',
-	height:30,
+	width:100,
+	height:'auto',
 	top:200,
 	left:20
 });
@@ -100,6 +100,17 @@ var doneButton = Titanium.UI.createButton({
 	bottom:0
 })
 
+//click event listener
+doneButton.addEventListener('click',function(e){
+	amountTextField.blur();
+	interestRateTextField.blur();
+	interestRateTextField.top = 150;
+	interestRateLabel.top = 150;
+	interestRate = interestRateTextField.value;
+	amountTextField.visible = true;
+	amountLabel.visible = true;
+})
+
 var amountTextField = Titanium.UI.createTextField({
 	hintText: '1000.00',
 	width:140,
@@ -110,7 +121,7 @@ var amountTextField = Titanium.UI.createTextField({
 	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	returnKeyType:Titanium.UI.RETURNKEY_DONE,
 	keyboardType:Titanium.UI.KEYBOARD_NUMBER_PAD
-})
+});
 view.add(amountTextField);
 
 var interestRateTextField = Titanium.UI.createTextField({
@@ -122,7 +133,7 @@ var interestRateTextField = Titanium.UI.createTextField({
 	keyboardToolbar: [flexSpace,doneButton],
 	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
 	returnKeyType:Titanium.UI.RETURNKEY_DONE
-})
+});
 
 interestRateTextField.addEventListener('focus',function(e){
 	if(Ti.Platform.osname == 'iPhone'){
@@ -131,27 +142,33 @@ interestRateTextField.addEventListener('focus',function(e){
 		amountTextField.visible = false;
 		amountLabel.visible = false;
 	}
-})
+});
 view.add(interestRateTextField);
 
-//click event listener
-doneButton.addEventListener('click',function(e){
-	Ti.API.info("Available memory: " + Ti.Platform.availableMemory);
-    
-	amountTextField.blur();
-	interestRateTextField.blur();
+//create the slider to control the loan length
+var loanLengthSlider = Titanium.UI.createSlider({
+	width: 	140,
+	top:	loanLengthLabel.top,
+	right:  20,
+	min:	12,
+	max:	60,
+	value:	numberMonths,
+	thumbImage:'sliderThumbSelected.png',
+	highlightedThumbImage:'sliderThumbSelected.png'
+});
+
+loanLengthSlider.addEventListener('change',function(e){
+	Ti.API.info(loanLengthSlider.value);
+	//update numberMounth
+	numberMonths = Math.round(loanLengthSlider.value);
+	Ti.API.info('Loan length '+numberMonths);
+	Ti.API.info('Loan length Math.round'+ Math.round(numberMonths));
 	
-/*
-	interestRateTextField.top = 150;
-	interestRateLabel.top = 150;
-	interestRate = interestRateTextField.value;
-	amountTextField.visible = true;
-	amountLabel.visible = true;*/
-	Ti.API.info("Available memory: " + Ti.Platform.availableMemory);
-   
-})
+	loanLengthLabel.text ='Loan length (' + numberMonths+ ' months):';
+	
+});
 
-
+view.add(loanLengthSlider);
 
 win1.add(view);
 

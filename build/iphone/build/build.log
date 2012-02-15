@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 02/15/12 22:24
+Starting build at 02/15/12 23:51
 
 Build details:
 
@@ -24,7 +24,7 @@ Script arguments:
    LoanCalc
    universal
    iphone
-   192.168.1.111:59172
+   192.168.1.111:61182
 
 Building from: /Users/Gustav/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/iphone
 Platform: Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011; root:xnu-1699.24.8~1/RELEASE_X86_64
@@ -439,6 +439,8 @@ PhaseScriptExecution Pre-Compile build/LoanCalc.build/Debug-iphonesimulator/Loan
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.jpg to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.jpg
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/logo.png.zip to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/logo.png.zip
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/sliderThumbSelected.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/sliderThumbSelected.png
+[DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/window2.js to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/window2.js
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/appicon.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/appicon.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Landscape.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Landscape.png
 [DEBUG] linking: /Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/iphone/Default-Portrait.png to /Users/Gustav/Documents/GitHubPool/LoanCalc/build/iphone/build/Debug-iphonesimulator/LoanCalc.app/Default-Portrait.png
