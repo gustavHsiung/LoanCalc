@@ -32,7 +32,10 @@ view.add(switchLabel);
 var chartOptionSwitch = Titanium.UI.createSwitch({
 	right: 20,
 	top: 20,
-	value: false
+	value: win1.autoShowChart
+})
+chartOptionSwitch.addEventListener('change',function(e){
+	win1.autoShowChart = chartOptionSwitch.value;
 })
 view.add(chartOptionSwitch);
 
