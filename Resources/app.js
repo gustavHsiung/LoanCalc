@@ -60,7 +60,7 @@ var amountLabel = Titanium.UI.createLabel({
 	textAlign:'center',
 	width:'auto',
 	height:30,
-	top:100,
+	top:80,
 	left:20
 });
 view.add(amountLabel);
@@ -72,7 +72,7 @@ var interestRateLabel = Titanium.UI.createLabel({
 	textAlign:'left',
 	width:'auto',
 	height:30,
-	top:150,
+	top:130,
 	left:20
 });
 view.add(interestRateLabel);
@@ -84,7 +84,7 @@ var loanLengthLabel = Titanium.UI.createLabel({
 	textAlign:'left',
 	width:100,
 	height:'auto',
-	top:200,
+	top:180,
 	left:20
 });
 view.add(loanLengthLabel);
@@ -115,7 +115,7 @@ var amountTextField = Titanium.UI.createTextField({
 	hintText: '1000.00',
 	width:140,
 	height:30,
-	top:100,
+	top:80,
 	right:20,
 	keyboardToolbar: [flexSpace,doneButton],
 	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
@@ -137,8 +137,8 @@ var interestRateTextField = Titanium.UI.createTextField({
 
 interestRateTextField.addEventListener('focus',function(e){
 	if(Ti.Platform.osname == 'iPhone'){
-		interestRateTextField.top = 100;
-		interestRateLable.top = 100;
+		interestRateTextField.top = 80;
+		interestRateLable.top = 80;
 		amountTextField.visible = false;
 		amountLabel.visible = false;
 	}
@@ -170,7 +170,40 @@ loanLengthSlider.addEventListener('change',function(e){
 
 view.add(loanLengthSlider);
 
-win1.add(view);
+
+// calculate button for interest for this loan
+var calculateInterestButton = Titanium.UI.createButton({
+	title:'Calculate Total Interest',
+    backgroundImage : 'cal_button_normal.png',
+    backgroundSelectedImage:'cal_button_press.png',
+    color:'#fff',
+    id: 1,
+    top: 235,
+    width: 266,
+	height: 42,
+	left: (view.width-266)/2,
+	font:{fontSize:12,fontFamily:'Helvetica Neue', fontWeight:'bold'},
+});
+//add the event listener
+calculateInterestButton.addEventListener('click', calculateAndDisplayValue);
+view.add(calculateInterestButton);
+
+// calculate button for repayment for this loan
+var calculateRepaymentsButton = Titanium.UI.createButton({
+	title:'Calculate Total Laon Repayment',
+    backgroundImage : 'cal_button_normal.png',
+    backgroundSelectedImage:'cal_button_press.png',
+    color:'#fff',
+    id: 2,
+    top: 280,
+    width: 266,
+	height: 42,
+	left: (view.width-266)/2,
+	font:{fontSize:12,fontFamily:'Helvetica Neue', fontWeight:'bold'},
+});
+//add the event listener
+calculateRepaymentsButton.addEventListener('click', calculateAndDisplayValue);
+view.add(calculateRepaymentsButton);
 
 //add the first tab and attach window object (win1) to it
 var tab1 = Ti.UI.createTab({
@@ -178,6 +211,12 @@ var tab1 = Ti.UI.createTab({
     title:'Calculate',
     window: win1
 });
+
+
+win1.add(view);
+
+
+
 //end of win1   
 
 //create the second window for settings tab
@@ -207,3 +246,28 @@ tabGroup.addTab(tab2);
 //open the tabgroup to launch the app
 tabGroup.open();
 
+
+//funcrions
+function calculateAndDisplayValue(e)
+{
+	//log the button id 
+    Ti.API.info('Button id = ' + e.source.id);
+    switch(e.source.id)
+    {
+    	case 1:
+    		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
+    		var totalInterest = (amountTextField.value * (interestRate/100) * numberMonths) /12
+    		Ti.API.info('totalInterest'+totalInterest);
+    		break;
+    	case 2:
+    		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
+    		var totalInterest = (amountTextField.value * (interestRate/100) * numberMonths) /12
+    		var totalRepayments = Math.round(amountTextField.value) + totalInterest;
+    		Ti.API.info('totalInterest'+totalInterest);
+    		Ti.API.info('totalRepayments'+totalRepayments);
+    		break;
+    		
+    	default:
+    		break;
+    }
+}
