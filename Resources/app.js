@@ -250,14 +250,25 @@ tabGroup.open();
 //funcrions
 function calculateAndDisplayValue(e)
 {
+	if(amountTextField.value == '' || amountTextField.value == null)
+	{
+		var errorDialog = Titanium.UI.createAlertDialog({
+			title:'Oops!',
+			message:'You must provide a loan amount.'	
+		});
+		errorDialog.show();
+		return;
+	}
 	//log the button id 
     Ti.API.info('Button id = ' + e.source.id);
+    var optionsMessage;
     switch(e.source.id)
     {
     	case 1:
     		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
     		var totalInterest = (amountTextField.value * (interestRate/100) * numberMonths) /12
     		Ti.API.info('totalInterest'+totalInterest);
+    		optionsMessage = 'Total Interest on this loan to\n'+totalInterest;
     		break;
     	case 2:
     		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
@@ -265,9 +276,30 @@ function calculateAndDisplayValue(e)
     		var totalRepayments = Math.round(amountTextField.value) + totalInterest;
     		Ti.API.info('totalInterest'+totalInterest);
     		Ti.API.info('totalRepayments'+totalRepayments);
+    		optionsMessage = 'Total repayment on this loan to '+totalRepayments;
     		break;
     		
     	default:
     		break;
+    }
+    
+    if(win2.autoShowChart == true)
+    {
+    	openChartWindow();
+    }else
+    {
+    	var resultOptionDialog = Titanium.UI.createOptionDialog({
+    		title:	optionsMessage + ' \n\nDo you want to view the result in chart?',
+    		options: ['Okay','No'],
+    		cancel: 1
+    	});
+    	resultOptionDialog.addEventListener('click',function(e){
+    		Ti.API.info('Button index tapped was: ' + e.index);
+    		if(e.index == 0)
+    		{
+    			openChartWindow();
+    		}
+    	});
+    	resultOptionDialog.show();
     }
 }
