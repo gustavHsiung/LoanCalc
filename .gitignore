@@ -1,6 +1,7 @@
 # Build directories #
 #####################
 tmp
+build.log
 build/android/
 build/iphone/
 
