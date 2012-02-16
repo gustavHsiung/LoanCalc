@@ -1,6 +1,7 @@
 
-build.log
 .fastdev.lock
+build.log
+build/
 
 # Build directories #
 #####################
