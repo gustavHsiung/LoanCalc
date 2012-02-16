@@ -1,1 +1,0 @@
-/Users/Gustav/Documents/GitHubPool/LoanCalc/Resources/window2.js
