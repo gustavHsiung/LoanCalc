@@ -248,6 +248,7 @@ tabGroup.open();
 
 
 //funcrions
+
 function calculateAndDisplayValue(e)
 {
 	if(amountTextField.value == '' || amountTextField.value == null)
@@ -268,7 +269,7 @@ function calculateAndDisplayValue(e)
     		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
     		var totalInterest = (amountTextField.value * (interestRate/100) * numberMonths) /12
     		Ti.API.info('totalInterest'+totalInterest);
-    		optionsMessage = 'Total Interest on this loan to\n'+totalInterest;
+    		optionsMessage = 'Total Interest on this loan to '+totalInterest;
     		break;
     	case 2:
     		//Interest(I) = Principal(P) times Rate Per Period(r) times Number of Periods(n) / 12
@@ -302,4 +303,23 @@ function calculateAndDisplayValue(e)
     	});
     	resultOptionDialog.show();
     }
+}
+
+function openChartWindow(totalInterest, total)
+{
+	var totalInterest = (amountTextField.value * (interestRate / 100) * numberMonths) / 12;
+	var totalRepayments = Math.round(amountTextField.value) + totalInterest; 
+	var chartWindow = Titanium.UI.createWindow({
+		url:'chartwin.js',
+		title:'Loan Pie Chart',
+		barImage: 'navbar.png',
+		barColor: '#000',
+		numberMonths: numberMonths,
+		interestRate: interestRate,
+		totalInterest: totalInterest,
+		totalRepayments: totalRepayments,
+		principalRepayments: (totalRepayments - totalInterest)
+	});
+	tab1.open(chartWindow);
+
 }
