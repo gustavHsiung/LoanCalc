@@ -19,8 +19,7 @@ var webview = Titanium.UI.createWebView({
 
 webview.addEventListener('beforeload',function(e)
 {
-	webview.evalJS("var totalInterest=" + chartWin.totalInterest + "; var principalRepayments=" + chartWin.principalRepayments + "; var chartTitleInterest='" + chartTitleInterest + "'; var chartTitleRepayments='" + chartTitleRepayments + "'; ");
-	Ti.API.info(webview.html);
+	webview.evalJS("var chartTitleInterest=\'" + chartTitleInterest + "\'; var chartTitleRepayments=\'" + chartTitleRepayments + "\';var titleArray = [\"Interest\",\"Principal Repayments\"];var numberArray = ["+Math.round ((chartWin.totalInterest/chartWin.totalRepayments)*10)+","+Math.round ((chartWin.principalRepayments/chartWin.totalRepayments)*10)+"];");
 	
 });
 
