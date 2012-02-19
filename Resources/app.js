@@ -231,7 +231,7 @@ var win2 = Titanium.UI.createWindow({
   barImage: 'navbar.png'
 });
 //setup the initial value of win2's custom property: autoShowChart
-win2.autoShowChart = false;
+win2.autoShowChart = true;
 
 //the second tab and attach the second window 
 var tab2 = Ti.UI.createTab({

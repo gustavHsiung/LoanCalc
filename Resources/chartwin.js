@@ -17,10 +17,17 @@ var webview = Titanium.UI.createWebView({
 	url: 'chart.htm'//
 }); 
 
-webview.addEventListener('beforeload',function(e)
+webview.addEventListener('load',function(e)
 {
-	webview.evalJS("var chartTitleInterest=\'" + chartTitleInterest + "\'; var chartTitleRepayments=\'" + chartTitleRepayments + "\';var titleArray = [\"Interest\",\"Principal Repayments\"];var numberArray = ["+Math.round ((chartWin.totalInterest/chartWin.totalRepayments)*10)+","+Math.round ((chartWin.principalRepayments/chartWin.totalRepayments)*10)+"];");
-	
+	 Ti.App.fireEvent('pageReady',{
+	 	chartTitleInterest:chartTitleInterest,
+	 	chartTitleRepayments:chartTitleRepayments,
+	 	interestTitle:'Interest',
+	 	principalTitle:'Principal Repayments',
+	 	interestPercentage:Math.round ((chartWin.totalInterest/chartWin.totalRepayments)*10),
+	 	pincipalPercentage:Math.round ((chartWin.principalRepayments/chartWin.totalRepayments)*10)
+	 	});
+		
 });
 
 chartWin.add(webview);
